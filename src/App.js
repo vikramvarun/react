@@ -4,6 +4,7 @@ import Header from "./components/Header"
 import MainContent from "./components/MainContent"
 import Footer from "./components/Footer"
 import TodoItems from "./components/TodoItems"
+import Contacts from "./components/Contacts"
 
 function App() {
     const listStyle = {
@@ -20,6 +21,7 @@ function App() {
     return (
         <div>
             <Header />
+            <Contacts />
             <MainContent />
             <div style={listStyle}>
                 <TodoItems />
