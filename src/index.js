@@ -1,12 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react"
+//used under the hood to interpret JSX
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import ReactDOM from "react-dom"
+import App from "./App"
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+//JSX -> sort of like javascript rendition/version of html
+//React-Dom.render(<h1>Hello, World!</h1>, document.getElementById("root")) -> valid
+//React-Dom.render(<h1>Hello, World!</h1><p>A paragraph.</p>, document.getElementById("root")) -> invalid
+ReactDOM.render(<App />, document.getElementById("root"))
+
+
+//without JSX, old method
+//var myNewP = document.createElement("p")
+//myNewP.innerHTML = "This is a paragraph."

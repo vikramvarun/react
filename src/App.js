@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+
+import Header from "./components/Header"
+import MainContent from "./components/MainContent"
+import Footer from "./components/Footer"
+import TodoItems from "./components/TodoItems"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const listStyle = {
+        "backgroundColor": "white",
+        "margin": "auto",
+        "width": "50%",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center",
+        "border": "1px solid #efefef",
+        "boxShadow": "\n        0 1px 1px rgba(0,0,0,0.15),\n            \n        0 10px 0 -5px #eee,\n            \n        0 10px 1px -4px rgba(0,0,0,0.15),\n            \n        0 20px 0 -10px #eee,\n            \n        0 20px 1px -9px rgba(0,0,0,0.15)",
+        "padding": "30px"
+    }
+    return (
+        <div>
+            <Header />
+            <MainContent />
+            <div style={listStyle}>
+                <TodoItems />
+                <TodoItems />
+                <TodoItems />
+            </div>
+            <Footer />
+        </div>
+    )
 }
 
-export default App;
+export default App
