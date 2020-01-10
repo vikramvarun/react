@@ -2,7 +2,7 @@ import React from "react"
 
 
 function TodoItems() {
-    const itemStyle = {
+    const todoItems = {
         "display": "flex",
         "justifyContent": "flex-start",
         "alignItems": "center",
@@ -15,7 +15,7 @@ function TodoItems() {
         "color": "#333333"
     }
     return (
-        <div style = {itemStyle}>
+        <div style = {todoItems}>
             <input type="checkbox" />
             <p>Select this option</p>
         </div>
