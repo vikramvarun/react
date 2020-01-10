@@ -6,7 +6,7 @@ function MainContent() {
         "justifyContent": "flex-start",
         "alignItems": "left",
         "padding": "10px 10px 0",
-        "width": "10%",
+        "width": "40px",
         "borderBottom": "1px solid #212121",
         "fontFamily": "Roboto, sans-serif",
         "fontWeight": "100",

@@ -1,6 +1,10 @@
 import React from "react"
-
-import Contacts from "./Contacts"
+import Contacts from "./components/Contacts"
+import ContactsData from "./components/ContactsData"
+import Jokes from "./components/Jokes"
+import JokesData from "./components/JokesData"
+import Products from "./components/Products"
+import ProductsData from "./components/ProductsData"
 
 function App() {
 
@@ -9,43 +13,48 @@ function App() {
         "flexWrap": "wrap"
     }
 
+    const jokeComponents = JokesData.map(joke =>
+        <Jokes
+            key={joke.id}
+            question={joke.question}
+            punchLine={joke.punchLine}
+        />
+    )
+
+    const contactComponents = ContactsData.map(contact =>
+        <Contacts
+            key={contact.id}
+            name={contact.name}
+            imgUrl={contact.imgUrl}
+            phone={contact.phone}
+            email={contact.email}
+        />
+    )
+
+    const productsCompomemts = ProductsData.map(products =>
+        <Products
+            key={products.id}
+            name={products.name}
+            price={products.price}
+            description={products.description}
+        />
+    )
+
     return (
-        <div style={contactList}>
-            <Contacts
-                contact={{
-                    name: "Mr. Whiskerson",
-                    imgUrl: "http://placekitten.com/300/200",
-                    phone: "(212) 555-1234",
-                    email: "mr.whiskaz@catnap.meow"
-                }}
-            />
-
-            <Contacts
-                contact={{
-                    name: "Fluffykins",
-                    imgUrl: "http://placekitten.com/400/200",
-                    phone: "(212) 555-2345",
-                    email: "fluff@me.com"
-                }}
-            />
-
-            <Contacts
-                contact={{
-                    name: "Destroyer",
-                    imgUrl: "http://placekitten.com/400/300",
-                    phone: "(212) 555-3456",
-                    email: "ofworlds@yahoo.com"
-                }}
-            />
-
-            <Contacts
-                contact={{
-                    name: "Felix",
-                    imgUrl: "http://placekitten.com/200/100",
-                    phone: "(212) 555-4567",
-                    email: "thecat@hotmail.com"
-                }}
-            />
+        <div>
+            <div style={contactList}>
+                {contactComponents}
+            </div>
+            <div>
+                <h2 >Jokes:</h2>
+                <br />
+                {jokeComponents}
+            </div>
+            <div>
+                <h2 >Jokes:</h2>
+                <br />
+                {productsCompomemts}
+            </div>
         </div>
 
 

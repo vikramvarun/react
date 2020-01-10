@@ -2,10 +2,15 @@ import React from "react"
 
 function Footer() {
     const date = new Date()
-    date.setTime(date.getTime() + 20*60*1000)
+    date.setTime(date.getTime() + 30 * 60 * 1000)
     const hours = date.getHours()
     let timeOfDay
-    const style = { backgroundColor: "#bbbbbb", fontSize: 30 }
+    const style = {
+        height: "110%",
+        backgroundColor: "#cccccc",
+        fontSize: 30,
+        textAlign: "center"
+    }
 
     if (hours < 12 && hours > 3) {
         timeOfDay = "morning"

@@ -12,11 +12,12 @@ function TodoItems() {
         "fontFamily": "Roboto, sans-serif",
         "fontWeight": "100",
         "fontSize": "15px",
-        "color": "#333333"
+        "color": "#333333",
+        textDecoration: "line-through"
     }
     return (
         <div style = {todoItems}>
-            <input type="checkbox" />
+            <input type="checkbox"/>
             <p>Select this option</p>
         </div>
     )

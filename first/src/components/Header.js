@@ -4,7 +4,7 @@ function Header() {
     const firstName = "Fname"
     const lastName = "Lname"
     const navbar = {
-        "height": "100px",
+        "height": "110%",
         "backgroundColor": "#333",
         "color": "whitesmoke",
         "marginBottom": "15px",
