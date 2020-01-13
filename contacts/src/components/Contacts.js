@@ -18,10 +18,10 @@ function Contacts(props) {
 
     return (
         <div style={card}>
-            <img src={props.imgUrl} />
-            <h3>{props.name}</h3>
-            <p>Phone: {props.phone}</p>
-            <p>Email: {props.email}</p>
+            <img src={props.item.imgUrl} />
+            <h3>{props.item.name}</h3>
+            <p>Phone: {props.item.phone}</p>
+            <p>Email: {props.item.email}</p>
             <br/>
             <hr />
         </div>)

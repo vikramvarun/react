@@ -16,27 +16,21 @@ function App() {
     const jokeComponents = JokesData.map(joke =>
         <Jokes
             key={joke.id}
-            question={joke.question}
-            punchLine={joke.punchLine}
+            item={joke}
         />
     )
 
     const contactComponents = ContactsData.map(contact =>
         <Contacts
             key={contact.id}
-            name={contact.name}
-            imgUrl={contact.imgUrl}
-            phone={contact.phone}
-            email={contact.email}
+            item={contact}
         />
     )
 
-    const productsCompomemts = ProductsData.map(products =>
+    const productsCompomemts = ProductsData.map(product =>
         <Products
-            key={products.id}
-            name={products.name}
-            price={products.price}
-            description={products.description}
+            key={product.id}
+            item={product}
         />
     )
 
@@ -46,12 +40,12 @@ function App() {
                 {contactComponents}
             </div>
             <div>
-                <h2 >Jokes:</h2>
+                <h2 >Jokes: </h2>
                 <br />
                 {jokeComponents}
             </div>
             <div>
-                <h2 >Jokes:</h2>
+                <h2 >Products:</h2>
                 <br />
                 {productsCompomemts}
             </div>

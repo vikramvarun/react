@@ -1,4 +1,4 @@
-const contactsData = [
+export default [
     {
         id: 1,
         name: "Mr. Whiskerson",
@@ -28,5 +28,3 @@ const contactsData = [
         email: "thecat@hotmail.com"
     }
 ]
-
-export default contactsData

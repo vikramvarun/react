@@ -1,4 +1,4 @@
-const jokesData = [
+export default [
     {
         id: 1,
         punchLine: "It’s hard to explain puns to kleptomaniacs because they always take things literally."
@@ -29,5 +29,3 @@ const jokesData = [
         punchLine: "He just needed a little space."
     }
 ]
-
-export default jokesData

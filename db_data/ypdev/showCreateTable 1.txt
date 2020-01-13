@@ -1,0 +1,38 @@
+CREATE TABLE `RESCORE` (
+  `cid` bigint(20) DEFAULT NULL,
+  `ip_rejected_ratio` double DEFAULT NULL,
+  `number_of_apps_same_ip` bigint(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+CREATE TABLE `ReScore` (
+  `UID` int(11) NOT NULL,
+  `ip_rejected_ratio` float DEFAULT NULL,
+  `number_of_apps_same_ip` int(11) DEFAULT NULL,
+  PRIMARY KEY (`UID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+CREATE TABLE `YP_SINK_TOPIC` (
+  `AUTHID` varchar(256) DEFAULT NULL,
+  `SNAME` varchar(256) DEFAULT NULL,
+  `ID` int(11) DEFAULT NULL,
+  `EMAIL` varchar(256) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+CREATE TABLE `academic_results` (
+  `autoid` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `kb_acad_result_ts` varchar(100) DEFAULT NULL,
+  `cid` bigint(20) DEFAULT NULL,
+  `university_name` varchar(100) DEFAULT NULL,
+  `reg_no` varchar(50) DEFAULT NULL,
+  `request_timestamp` datetime DEFAULT NULL,
+  `request_response` int(11) DEFAULT NULL,
+  `report_timestamp` datetime DEFAULT NULL,
+  `report_id` varchar(100) DEFAULT NULL,
+  `report_response` int(11) DEFAULT NULL,
+  `createdOn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updatedOn` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`autoid`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1

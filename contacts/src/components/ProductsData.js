@@ -1,4 +1,4 @@
-const products = [
+export default [
     {
         id: "1",
         name: "Pencil",
@@ -48,5 +48,3 @@ const products = [
         description: "To prove to other devs you know a lot."
     }
 ]
-
-export default products
